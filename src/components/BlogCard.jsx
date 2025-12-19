@@ -4,7 +4,7 @@ import { Button } from './Button'
 export const BlogCard = ({ color, title, description, category, slug }) => {
   function truncateText(str, maxLength) {
     if (str.length > maxLength) {
-      return str.slice(0, maxLength - 3) + '...' // Leave space for "..."
+      return str.slice(0, maxLength - 3) + '...'
     }
     return str
   }
@@ -30,12 +30,12 @@ export const BlogCard = ({ color, title, description, category, slug }) => {
       <p className="text-lg text-white/70 mt-4">
         {truncateText(description, 90)}
       </p>
-      <div className="min-w-full flex justify-between mt-12">
+      <div className="min-w-full flex justify-start mt-12">
         <Button
           href={`/blog/${slug}`}
           variant="tertiary"
           size="small"
-          className={`${color} m-0`}
+          className={`${color} mr-40`}
         >
           Read more
         </Button>

@@ -9,14 +9,14 @@ export const BlogSection = ({ latestPosts }) => {
 
   return (
     <section className="py-20 px-6">
-      <div className="container">
+      <div className="md:max-w-250 mx-auto">
         <HeadingContent
           headingParts={headingText}
           subheading={paragraphText}
           variant="level2"
           headerLevel="h2"
         />
-        <div className="flex flex-col items-center space-y-4 mt-16 md:flex-row md:flex-wrap md:items-stretch md:justify-center space-x-4">
+        <div className="flex flex-col items-center space-y-6 mt-16 md:flex-row md:flex-wrap md:items-stretch md:justify-evenly p-4">
           {latestPosts.map(
             ({ data: { title, description, category } }, postIndex) => (
               <BlogCard
